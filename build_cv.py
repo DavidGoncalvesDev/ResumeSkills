@@ -26,7 +26,7 @@ def section(text):
 
 def role(title,org,dates):
     p=doc.add_paragraph(); p.paragraph_format.space_before=Pt(3); p.paragraph_format.space_after=Pt(0); p.paragraph_format.keep_with_next=True
-    p.paragraph_format.tab_stops.add_tab_stop(Inches(6.85),WD_TAB_ALIGNMENT.RIGHT)
+    p.paragraph_format.tab_stops.add_tab_stop(Inches(6.83),WD_TAB_ALIGNMENT.RIGHT)
     fmt(p.add_run(title),10.8,True,INK); fmt(p.add_run('\t'+dates),9.6,True,BLUE)
     p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); p.paragraph_format.keep_with_next=True
     fmt(p.add_run(org),9.8,False,GRAY)
@@ -57,14 +57,14 @@ bullet('Set up cloud-based databases to organise information for the student ent
 role('Student Research Project: The Impact of Diet on Chicken Growth and Health','Colégio Sagrado Coração de Maria','2024–2025')
 bullet('Observed and documented chicken behaviour and growth over a two-month period; collected, processed, and analysed data.')
 bullet('Formulated a hypothesis and evaluated results to develop evidence-based conclusions.')
-p=doc.add_paragraph(); p.paragraph_format.space_before=Pt(3); p.paragraph_format.space_after=Pt(1); p.paragraph_format.keep_with_next=True; fmt(p.add_run('Hackathons'),10.8,True,INK)
-bullet('Took part in health and AI hackathons, gaining experience in collaborative problem-solving and project work.')
+role('Hackathons','Various health and AI hackathons','2025–Present')
+bullet('Took part in collaborative hackathon projects focused on health and AI.')
 role('Participant and Speaker','Sagrado MUN','2022–2025')
-bullet('Participated in simulated United Nations council sessions, practising critical thinking, public speaking, and collaboration.')
+bullet('Represented a country in simulated United Nations councils, discussing international affairs and developing public speaking, critical thinking, and collaboration skills.')
 section('Skills and Tools')
-p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Data and databases: '),10.1,True,NAVY); fmt(p.add_run('SQL, cloud-based databases, data collection and analysis'),10.1)
-p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Programming and web: '),10.1,True,NAVY); fmt(p.add_run('Python, SAS, VS Code, GitHub, website development'),10.1)
-p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Tools: '),10.1,True,NAVY); fmt(p.add_run('Microsoft 365 (Excel, Word, PowerPoint, Outlook)'),10.1)
+p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Data and databases: '),10.1,True,NAVY); fmt(p.add_run('SQL, SAS, R, cloud-based databases, data collection and analysis'),10.1)
+p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Programming and web: '),10.1,True,NAVY); fmt(p.add_run('Python, VS Code, GitHub, website development'),10.1)
+p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Microsoft 365: '),10.1,True,NAVY); fmt(p.add_run('Excel, Word, PowerPoint, Outlook'),10.1)
 p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('AI-assisted development: '),10.1,True,NAVY); fmt(p.add_run('Codex, Cursor, Antigravity, Claude Code'),10.1)
 p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(2); fmt(p.add_run('Creative tools: '),10.1,True,NAVY); fmt(p.add_run('Canva, CapCut, Blender, video and image editing'),10.1)
 section('Languages')
@@ -72,6 +72,13 @@ p=doc.add_paragraph('Portuguese (C2)  |  English (C1)  |  French (A2)'); p.parag
 for para in doc.paragraphs: para.paragraph_format.widow_control=True
 doc.core_properties.title='David Dionísio Gonçalves CV'; doc.core_properties.subject='Entry-level internship CV'; doc.core_properties.author='David Dionísio Gonçalves'
 doc.save(out); print(out)
+
+
+
+
+
+
+
 
 
 
